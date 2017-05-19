@@ -1,50 +1,18 @@
 """
-operatory które można używać w odniesieniu do słonika
+iterating over a dictionary
+No method is needed to iterate over a dictionary:
 
-
-Operators - Explanation
-len(d) 		- returns the number of stored entries, i.e. the number of (key,value) pairs.
-del d[k] 	- deletes the key k together with his value
-k in d 		- True, if a key k exists in the dictionary d
-k not in d 	- True, if a key k doesn't exist in the dictionary d
-
-
->>> if "car" in words: print words["car"]
-... 
->>> if "cat" in words: print words["cat"]
-... 
-Katze
-
-"""
-
-""" 
-method for dictionaries
-
-- copy() - kopiowanie słownika
-words = {'house': 'Haus', 'cat': 'Katze'}
-	w = words.copy()
-	words["cat"] = "chat"
-	print ("w = ", w)
-	print ("wods = ", words)
-	---
-	the result:
-	w = {'house': 'Haus', 'cat': 'Katze'}
-	words = {'house': 'Haus', 'cat': 'chat'}
-   	
-- clear()
-	w.clear()
-	print("w = ", w) - in this case the empty dictionary was displayed
-	---
-	result
-	w =  {}
-- update() - in this case two dictionaries are merged into another one.
-	words = {'house': 'Haus', 'cat': 'Katze'}
-	w = words.copy()
-	w1 = {"red":"rouge","blau":"bleu"}
-	w.update(w1)
-	print("w = ", w)
+for key in d:
+	print key
+But it's possible to use the method iterkeys():
+for key in d.iterkeys():
+	print key
+The method itervalues() is a convenient way for iterating directly over the values:
+for val in d.itervalues():
+	print val
+The above loop is of course equivalent to the following one:
+for key in d:
+	print d[key]
 	
-	result:
-	w =  {'house': 'Haus', 'cat': 'Katze', 'red': 'rouge', 'blau': 'bleu'}
-   
+	
 """
