@@ -9,11 +9,12 @@ then, the output should be:
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 
 """
+# in current solution I created two separate list, and then I added them to the dictionary
+# I used the zip function
 
 n = 8
 
 newDict = {}
-#first try - dictionary from two different lists
 
 keyList = []
 for value in range (1,n+1):
@@ -28,9 +29,11 @@ for values in range (1,n+1):
 	
 #print (valueList)
 
-#we can use the funciotn zip() to add two lists to one dictionary
+#Below was used the zip() function which help to merge to separate lists in one matrix
 
 newZipper = zip(keyList, valueList)
+
+#next step is adding the matrix to dictionary
 newDict = dict(newZipper)
 
 print (newDict)
