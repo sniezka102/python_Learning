@@ -1,18 +1,23 @@
 """
-iterating over a dictionary
-No method is needed to iterate over a dictionary:
+how to create list from dictionaries
 
-for key in d:
-	print key
-But it's possible to use the method iterkeys():
-for key in d.iterkeys():
-	print key
-The method itervalues() is a convenient way for iterating directly over the values:
-for val in d.itervalues():
-	print val
-The above loop is of course equivalent to the following one:
-for key in d:
-	print d[key]
-	
-	
 """
+
+w={"house":"Haus","cat":"Katze","red":"rot"}
+w1 = w.items()
+print ("\n", w1)
+w2 = w.keys()
+print("\n", w2)
+
+w3 = w.values()
+print("\n", w3)
+
+"""
+---
+result:
+ dict_items([('house', 'Haus'), ('cat', 'Katze'), ('red', 'rot')])
+
+ dict_keys(['house', 'cat', 'red'])
+
+ dict_values(['Haus', 'Katze', 'rot'])
+ """
