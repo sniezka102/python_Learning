@@ -9,32 +9,20 @@ then, the output should be:
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 
 """
-# in current solution I created two separate list, and then I added them to the dictionary
-# I used the zip function
+# the simplest way suggested by the book author
 
-n = input("please add the value")
+n = input("please, give me the number")
 n = int(n)
 
-newDict = {}
+dictionaryVal = dict()
 
-keyList = []
-for value in range (1,n+1):
-	keyList.append(value)
-
-#print (keyList)
+for i in range (1, n+1):
+	d[i] = i * i
 	
-valueList = []
-for values in range (1,n+1):
-	val = values ** 2
-	valueList.append(val)
-	
-#print (valueList)
+print (dictionaryVal)
 
-#Below was used the zip() function which help to merge to separate lists in one matrix
-
-newZipper = zip(keyList, valueList)
-
-#next step is adding the matrix to dictionary
-newDict = dict(newZipper)
-
-print (newDict)
+"""
+response
+add value 8
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+"""
