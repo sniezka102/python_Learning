@@ -8,13 +8,16 @@ Supposed the following input is supplied to the program:
 then, the output should be:
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 
+
+creation of the empty dictionary, sometimes the dictionary is named hash
+
 """
 # the simplest way suggested by the book author
 
 n = input("please, give me the number")
 n = int(n)
 
-dictionaryVal = dict()
+
 
 for i in range (1, n+1):
 	d[i] = i * i
@@ -26,3 +29,4 @@ response
 add value 8
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 """
+

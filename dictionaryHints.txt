@@ -1,0 +1,23 @@
+"""
+how to create list from dictionaries
+
+"""
+
+w={"house":"Haus","cat":"Katze","red":"rot"}
+w1 = w.items()
+print ("\n", w1)
+w2 = w.keys()
+print("\n", w2)
+
+w3 = w.values()
+print("\n", w3)
+
+"""
+---
+result:
+ dict_items([('house', 'Haus'), ('cat', 'Katze'), ('red', 'rot')])
+
+ dict_keys(['house', 'cat', 'red'])
+
+ dict_values(['Haus', 'Katze', 'rot'])
+ """
