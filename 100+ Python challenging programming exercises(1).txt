@@ -1,6 +1,6 @@
 100+ Python challenging programming exercises
 
-
+http://www.python-course.eu/dictionaries.php - greate Python description
 
 1.	Level description
 
