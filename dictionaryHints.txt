@@ -8,4 +8,43 @@ del d[k] 	- deletes the key k together with his value
 k in d 		- True, if a key k exists in the dictionary d
 k not in d 	- True, if a key k doesn't exist in the dictionary d
 
+
+>>> if "car" in words: print words["car"]
+... 
+>>> if "cat" in words: print words["cat"]
+... 
+Katze
+
+"""
+
+""" 
+method for dictionaries
+
+- copy() - kopiowanie słownika
+words = {'house': 'Haus', 'cat': 'Katze'}
+	w = words.copy()
+	words["cat"] = "chat"
+	print ("w = ", w)
+	print ("wods = ", words)
+	---
+	the result:
+	w = {'house': 'Haus', 'cat': 'Katze'}
+	words = {'house': 'Haus', 'cat': 'chat'}
+   	
+- clear()
+	w.clear()
+	print("w = ", w) - in this case the empty dictionary was displayed
+	---
+	result
+	w =  {}
+- update() - in this case two dictionaries are merged into another one.
+	words = {'house': 'Haus', 'cat': 'Katze'}
+	w = words.copy()
+	w1 = {"red":"rouge","blau":"bleu"}
+	w.update(w1)
+	print("w = ", w)
+	
+	result:
+	w =  {'house': 'Haus', 'cat': 'Katze', 'red': 'rouge', 'blau': 'bleu'}
+   
 """
