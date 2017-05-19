@@ -15,6 +15,7 @@ then, the output should be:
 n = input("please add the value")
 n = int(n)
 
+#creation of the empty dictionary, sometimes the dictionary is named hash
 newDict = {}
 
 keyList = []

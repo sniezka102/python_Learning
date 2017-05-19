@@ -1,0 +1,10 @@
+# -*- coding: iso-8859-1 -*-
+
+#example how to create the dictionary german to french
+
+en_de = {"red" : "rot", "green" : "grÃ¼n", "blue" : "blau", "yellow":"gelb"}
+print (en_de)
+print (en_de["red"])
+de_fr = {"rot" : "rouge", "grÃ¼n" : "vert", "blau" : "bleu", "gelb":"jaune"}
+print ("The French word for red is: " + de_fr[en_de["red"]])
+
