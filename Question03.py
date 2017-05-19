@@ -12,7 +12,8 @@ then, the output should be:
 # in current solution I created two separate list, and then I added them to the dictionary
 # I used the zip function
 
-n = 8
+n = input("please add the value")
+n = int(n)
 
 newDict = {}
 
