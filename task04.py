@@ -14,20 +14,24 @@ Then, the output should be:
 ('34', '67', '55', '33', '12', '98')
 
 """
+dataMatrix = input("podaj wartoci oddzielone przecinkiem")
+#lista = [] - to jest nie potrzebne, ale nie wywołuje błedu
+lista = dataMatrix.split(",")
+print(lista)
 
-values = input("podaj wartoci oddzielone przecinkiem")
-
-l = values.split(",")
-
-t = tuple(l)
-
-
-print (t)
-print (l)
-
+#konwert list to tuple
+#tupleData = () - to jest niezbędne, ale nie wywołuje błędu
+tupleData = tuple(lista)
+print (tupleData)
 
 """
-result 
-podaj wartoci oddzielone przecinkiem 34,67,55,33,12,98
-('34', '67', '55', '33', '12', '98')
-['34', '67', '55', '33', '12', '98']
+how to convert list to tuple
+lista = []
+tuplek = tuple(lista)
+
+how to convert tuple to lista
+tuple = ()
+lista = list(tuplek)
+
+"""
+
