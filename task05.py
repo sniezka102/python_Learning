@@ -15,17 +15,17 @@ https://learnpythonthehardway.org/book/ex40.html
 """
 
 
-class printFunction(object):
+class PrintObject:
   
   def getString(self,text):
-    self.text = text
-    printString(self,text)
+    self.text2 = text
+    printString(text)
 
   def printString(self,text):
     print (text.upper())
   
 # create the obcject
-strObj2 = printFunction()
+strObj2 = PrintObject()
 
 textString = "now we will look how it works"
 strObj2.getString(textString)
