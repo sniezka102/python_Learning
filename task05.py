@@ -16,14 +16,14 @@ https://learnpythonthehardway.org/book/ex40.html
 
 
 class PrintObject:
-  
+
   def getString(self,text):
     self.text2 = text
-    printString(text)
+    self.printString(text)
 
   def printString(self,text):
     print (text.upper())
-  
+
 # create the obcject
 strObj2 = PrintObject()
 
@@ -35,20 +35,20 @@ strObj2.getString(textString)
 class InputOutString(object):
   def __init__(self):
     self.data = "" #create the data type string - it is suggested by ""
-    
+
   def getString(self): #metoda do popierania danych z konsoli
     self.data = input("write text: ")
 
   def printString(self):
     print (self.data.upper())
-  
+
 #create the object
 strObj = InputOutString()
 #call the funkcjon
 strObj.getString()
 strObj.printString()
-    
-    
+
+
 hints:
 Use __init__ method to construct some parameters
 
