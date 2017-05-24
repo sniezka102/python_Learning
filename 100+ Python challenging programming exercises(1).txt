@@ -175,17 +175,16 @@ strObj.printString()
 my solution:
 
 class InputFromConsole:
-	def __init__(self, text):
-		self.data = text
-	def getTextFromConsolue(self, text):
-		self.text = input("give me a string value ")
-		self.printText(text)
-	
-	def printText (text):
-		print(text)
+	def __init__(self):
+		self.data = ""
+	def getTextFromConsolue(self):
+		self.data = input("give me a string value ")	
+	def printText (self):
+		print(self)
 		
 obj = InputGromConsole()
-obj.print()
+obj.getTextFromConsolue()
+obj.printText()
 
 
 #----------------------------------------------------------------------------------------------------------------------------------#
@@ -248,277 +247,82 @@ for items in D:
 print (Q)
 #----------------------------------------------------------------------------------------------------------------------------------#
 
-Question 7
-
-Level 2
-
-
-
+Question 7  - Level 2
 Question:
-
-Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional 
-
-array. The element value in the i-th row and j-th column of the array should be i*j.
+Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i*j. 
 
 Note: i=0,1.., X-1; j=0,1..,Y-1.
 
 Example
-
 Suppose the following inputs are given to the program:
-
 3,5
-
 Then, the output of the program should be:
-
 [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]] 
 
-
-
 Hints:
-
-Note: In case of input data being supplied to the question, it should be assumed 
-
-to be a console input in a comma-separated form.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.
 
 Solution:
 
 input_str = raw_input()
-
 dimensions=[int(x) for x in input_str.split(',')]
-
 rowNum=dimensions[0]
-
 colNum=dimensions[1]
-
 multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
-
-
-
 for row in range(rowNum):
-
-    for col in range(colNum):
-
+   for col in range(colNum):
         multilist[row][col]= row*col
-
-
-
 print multilist
 
-#----------------------------------------#
+#----------------------------------------------------------------------------------------------------------------------------------#
+my solution:
+
+value = input("please add value separated the comma")
+data = []
+data = value.split(",")
+
+testArray = []
+
+#create the number of columns and rows
+X = int(data[0]) #columns
+print ("X / columns = ", X)
+Y = int(data[1]) #rows
+print ("Y / rows = ", Y)
+
+#in current solution was used the two dimentional generator to create the array
+testArray = [[i * j for j in range(Y)] for i in range(X)]
+print (testArray)
 
 
+#----------------------------------------------------------------------------------------------------------------------------------#
 
-#----------------------------------------#
-
-Question 8
-
-Level 2
-
-
-
+Question 8  - Level 2
 Question:
-
-Write a program that accepts a comma separated sequence of words as input and prints 
-
-the words in a comma-separated sequence after sorting them alphabetically.
-
-Suppose the following input is supplied to the program:
-
-without,hello,bag,world
-
+Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically. Suppose the following input is supplied to the program:
+	without,hello,bag,world
 Then, the output should be:
-
-bag,hello,without,world
-
-
+	bag,hello,without,world
 
 Hints:
-
-In case of input data being supplied to the question, it should be assumed 
-
-to be a console input.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+In case of input data being supplied to the question, it should be assumed to be a console input.
 
 Solution:
 
 items=[x for x in raw_input().split(',')]
-
 items.sort()
-
 print ','.join(items)
 
-#----------------------------------------#
+#----------------------------------------------------------------------------------------------------------------------------------#
+my solution:
 
+stringInput = input("please, write few words")
+stringInput = stringInput.split(",")
 
+sortedString = []
+sortedString = sorted(stringInput, key = str.lower)
+print(','.join(sortedString)) #now is displayed by the comma, not as the list of strings
 
-#----------------------------------------#
+#----------------------------------------------------------------------------------------------------------------------------------#
 
 Question 9
 
