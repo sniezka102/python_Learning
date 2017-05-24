@@ -8,34 +8,25 @@ Supposed the following input is supplied to the program:
 then, the output should be:
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 
-"""
-# in current solution I created two separate list, and then I added them to the dictionary
-# I used the zip function
 
-n = input("please add the value")
+creation of the empty dictionary, sometimes the dictionary is named hash
+
+"""
+# the simplest way suggested by the book author
+
+n = input("please, give me the number")
 n = int(n)
 
-#creation of the empty dictionary, sometimes the dictionary is named hash
-newDict = {}
 
-keyList = []
-for value in range (1,n+1):
-	keyList.append(value)
 
-#print (keyList)
+for i in range (1, n+1):
+	d[i] = i * i
 	
-valueList = []
-for values in range (1,n+1):
-	val = values ** 2
-	valueList.append(val)
-	
-#print (valueList)
+print (dictionaryVal)
 
-#Below was used the zip() function which help to merge to separate lists in one matrix
+"""
+response
+add value 8
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+"""
 
-newZipper = zip(keyList, valueList)
-
-#next step is adding the matrix to dictionary
-newDict = dict(newZipper)
-
-print (newDict)
