@@ -11,3 +11,21 @@ Notes: Assume the data is input by console.
 Hints:
 In case of input data being supplied to the question, it should be assumed o be a console input.
 """
+
+digitBinaryNumbers = input("add 4 digit binary numbers, which are separated by the comma\n")
+digitBinaryNumbers = digitBinaryNumbers.split(",")
+digitVal = []
+
+for binaryNumber in digitBinaryNumbers:
+  convertedDigitNumber = int(binaryNumber, 2) #conversion from binary to digit 
+  if (convertedDigitNumber % 5 == 0):
+    digitVal.append(binaryNumber)
+    print("".join(binaryNumber))
+
+"""
+ the grumpy comments up above suggested, the int function takes a second argument, which is the base of the conversion. So it's taking the base 2 (binary) variable bound to p and turning it to a base-10 int, i.e., normal human.
+
+"""
+
+
+  
