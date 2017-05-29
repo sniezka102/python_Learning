@@ -324,265 +324,63 @@ print(','.join(sortedString)) #now is displayed by the comma, not as the list of
 
 #----------------------------------------------------------------------------------------------------------------------------------#
 
-Question 9
-
-Level 2
-
-
+Question 9 -- Level 2
 
 Question:
-
-Write a program that accepts sequence of lines as input and prints the lines after 
-
-making all characters in the sentence capitalized.
-
+Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
 Suppose the following input is supplied to the program:
-
 Hello world
-
 Practice makes perfect
 
 Then, the output should be:
 
 HELLO WORLD
-
 PRACTICE MAKES PERFECT
 
-
-
 Hints:
-
-In case of input data being supplied to the question, it should be assumed 
-
-to be a console input.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+In case of input data being supplied to the question, it should be assumed to be a console input.
 
 
 Solution:
-
 lines = []
-
 while True:
-
     s = raw_input()
-
     if s:
-
         lines.append(s.upper())
-
     else:
-
         break;
-
-
-
 for sentence in lines:
-
     print sentence
 
 #----------------------------------------#
+my solution:
+lines = []
+print("add the text line, write 'break' if you want to finish action\n")
+while (True):
+  inputString = input()
+  if inputString == 'break':
+    break;
+  else:
+    lines.append(inputString.upper())
+for sentance in lines:
+  print("".join(sentance))
 
 
+#----------------------------------------------------------------------------------------------------------------------------------#
 
-#----------------------------------------#
-
-Question 10
-
-Level 2
-
-
-
+Question 10 - Level 2
 Question:
-
-Write a program that accepts a sequence of whitespace separated words as input and 
-
-prints the words after removing all duplicate words and sorting them alphanumerically.
-
+Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
 Suppose the following input is supplied to the program:
 
 hello world and practice makes perfect and hello world again
 
 Then, the output should be:
-
 again and hello makes perfect practice world
 
-
-
 Hints:
-
-In case of input data being supplied to the question, it should be assumed 
-
-to be a console input.
-
-We use set container to remove duplicated data automatically and then use sorted() 
-
-to sort the data.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+In case of input data being supplied to the question, it should be assumed to be a console input.
+We use set container to remove duplicated data automatically and then use sorted() to sort the data.
 
 Solution:
 
@@ -593,147 +391,58 @@ words = [word for word in s.split(" ")]
 print " ".join(sorted(list(set(words))))
 
 #----------------------------------------#
+my solution
+lines = []
+print("add the text line, write 'break' if you want to finish action\n")
+while (True):
+  inputString = input()
+  if inputString == 'break':    #?????????
+    break;                      #????????
+  else:
+    lines.append(inputString)
 
 
+lines = "".join(lines) #The method join() returns a string in which the string elements of sequence                     #have been joined by str separator.
+words = lines.split(" ")
 
-#----------------------------------------#
+allWords = set(words) #Test if every element in the set is in other.
 
-Question 11
+print(" ".join(sorted(allWords))) #sortowanie
 
-Level 2
+#----------------------------------------------------------------------------------------------------------------------------------#
 
-
-
+Question 11 - Level 2
 Question:
-
-Write a program which accepts a sequence of comma separated 4 digit binary numbers 
-
-as its input and then check whether they are divisible by 5 or not. The numbers 
-
-that are divisible by 5 are to be printed in a comma separated sequence.
+Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
 
 Example:
-
 0100,0011,1010,1001
-
-Then the output should be:
-
-1010
-
+	Then the output should be:  1010
 Notes: Assume the data is input by console.
 
-
-
 Hints:
-
-In case of input data being supplied to the question, it should be assumed 
-
-to be a console input.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+In case of input data being supplied to the question, it should be assumed o be a console input.
 
 Solution:
-
 value = []
-
 items=[x for x in raw_input().split(',')]
-
 for p in items:
-
     intp = int(p, 2)
-
     if not intp%5:
-
         value.append(p)
-
-
-
 print ','.join(value)
 
 #----------------------------------------#
+my solution
+digitBinaryNumbers = input("add 4 digit binary numbers, which are separated by the comma\n")
+digitBinaryNumbers = digitBinaryNumbers.split(",")
+digitVal = []
 
+for binaryNumber in digitBinaryNumbers:
+  convertedDigitNumber = int(binaryNumber, 2) #conversion from binary to digit 
+  if (convertedDigitNumber % 5 == 0):
+    digitVal.append(binaryNumber)
+    print("".join(binaryNumber))
 
 
 #----------------------------------------#
