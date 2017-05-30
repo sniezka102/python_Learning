@@ -2,29 +2,27 @@
 
 http://www.python-course.eu/dictionaries.php - greate Python description
 
-1.	Level description
+I. Level description
 
-Level	Description
+- Level 1	Beginner means someone who has just gone through an introductory Python course. He can solve some problems with 1 or 2 Python classes or functions. Normally, the answers could directly be found in the textbooks.
 
-Level 1	Beginner means someone who has just gone through an introductory Python course. He can solve some problems with 1 or 2 Python classes or functions. Normally, the answers could directly be found in the textbooks.
+- Level 2	Intermediate means someone who has just learned Python, but already has a relatively strong programming background from before. He should be able to solve problems which may involve 3 or 3 Python classes or functions. The answers cannot be directly be found in the textbooks.
 
-Level 2	Intermediate means someone who has just learned Python, but already has a relatively strong programming background from before. He should be able to solve problems which may involve 3 or 3 Python classes or functions. The answers cannot be directly be found in the textbooks.
-
-Level 3	Advanced. He should use Python to solve more complex problem using more rich libraries functions and data structures and algorithms. He is supposed to solve the problem using several Python standard packages and advanced techniques.
+- Level 3	Advanced. He should use Python to solve more complex problem using more rich libraries functions and data structures and algorithms. He is supposed to solve the problem using several Python standard packages and advanced techniques.
 
 
 
-2.	Problem template
-#----------------------------------------#
-
+II.Problem template
 Question
-
 Hints
-
 Solution
-
-3.	Questions
 #----------------------------------------#
+my solution
+
+#----------------------------------------------------------------------------------------------------------------------------------#
+
+III.	Questions
+
 Question 1 - done I will add it when be at home ------ Level 1
 
 Question:
@@ -41,7 +39,7 @@ for i in range(2000, 3201):
         l.append(str(i))
 print ','.join(l)
 
-#----------------------------------------------------------------------------------------------------------------------------------#
+#----------------------------------------#
 my solution
 
 
@@ -69,7 +67,7 @@ def fact(x):
 x=int(raw_input())
 print fact(x)
 
-#----------------------------------------------------------------------------------------------------------------------------------#
+#----------------------------------------#
 my solution:
 
 
@@ -95,7 +93,7 @@ for i in range(1,n+1):
     d[i]=i*i
 print d
 
-#----------------------------------------------------------------------------------------------------------------------------------#
+#----------------------------------------#
 my solution
 n = int(input("add vale"))
 newDict = {}
@@ -136,7 +134,7 @@ t=tuple(l)
 print l
 print t
 
-#----------------------------------------------------------------------------------------------------------------------------------#
+#----------------------------------------#
 
 my solution:
 numbers = input("give few values")
@@ -170,7 +168,7 @@ strObj = InputOutString()
 strObj.getString()
 strObj.printString()
 
-#----------------------------------------------------------------------------------------------------------------------------------#
+#----------------------------------------#
 
 my solution:
 
@@ -221,7 +219,7 @@ for d in items:
     value.append(str(int(round(math.sqrt(2*c*float(d)/h)))))
 print ','.join(value)
 
-#----------------------------------------------------------------------------------------------------------------------------------#
+#----------------------------------------#
 my solution:
 
 import math
@@ -274,7 +272,7 @@ for row in range(rowNum):
         multilist[row][col]= row*col
 print multilist
 
-#----------------------------------------------------------------------------------------------------------------------------------#
+#----------------------------------------#
 my solution:
 
 value = input("please add value separated the comma")
@@ -312,7 +310,7 @@ items=[x for x in raw_input().split(',')]
 items.sort()
 print ','.join(items)
 
-#----------------------------------------------------------------------------------------------------------------------------------#
+#----------------------------------------#
 my solution:
 
 stringInput = input("please, write few words")
