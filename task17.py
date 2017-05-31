@@ -33,5 +33,10 @@ for item in inputData:
   elif item.startswith('W'):
     test = item.split(" ")
     netAmount -= int(test[1])
+  else:
+    pass
     
 print ("netAmount = ", netAmount)
+    
+  
+  
