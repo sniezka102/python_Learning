@@ -18,20 +18,17 @@ The output of the program should be:
 import math
 
 #definition of function which take the values from the console and confert it to the list
-def inputData():
-  value = input ("write few numbers, please separate them by the comma")
-  value = value.split(",")
-  return value
 
-def convertStringToFloatArray():
+def convertStringToFloatArray(data):
   dValue = []
-  value = inputData()
-  for item in value:
+  for item in data:
     dValue.append(int(item))
   return (dValue)
 
+value = input ("write few numbers, please separate them by the comma")
+value = value.split(",")
 
-D = convertStringToFloatArray()
+D = convertStringToFloatArray(value)
 C = 50
 H = 30
 
