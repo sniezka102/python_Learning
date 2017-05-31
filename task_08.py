@@ -12,7 +12,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 """
 
-stringInput = input("please, write few words")
+stringInput = input("please, write few words in a comma-separated sequence")
 stringInput = stringInput.split(",")
 
 sortedString = []
