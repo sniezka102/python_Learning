@@ -16,7 +16,7 @@ The output of the program should be:
 """
 import math
 #definition of function which take the values from the console and confert it to the list
-def modifyInputDateToFloat():
+def convertInputDataToFloat():
   Dvalue = []
   value = input ("write few numbers, please separate them by the comma")
   value = value.split(",")
@@ -25,7 +25,7 @@ def modifyInputDateToFloat():
   return (Dvalue)
 
 
-D = modifyInputDateToFloat()
+D = convertInputDataToFloat()
 C = 50
 H = 30
 
