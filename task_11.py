@@ -13,14 +13,15 @@ In case of input data being supplied to the question, it should be assumed o be 
 """
 
 digitBinaryNumbers = input("add 4 digit binary numbers, which are separated by the comma\n")
-digitBinaryNumbers = digitBinaryNumbers.split(",")
-digitVal = []
+spiltTheDigitBinaryNumbers = digitBinaryNumbers.split(",")
+valueDividedByFife = []
 
-for binaryNumber in digitBinaryNumbers:
+for binaryNumber in spiltTheDigitBinaryNumbers:
   convertedDigitNumber = int(binaryNumber, 2) #conversion from binary to digit 
   if (convertedDigitNumber % 5 == 0):
-    digitVal.append(binaryNumber)
-    print("".join(binaryNumber))
+    valueDividedByFife.append(binaryNumber)
+
+print(",".join(valueDividedByFife))
 
 """
  the grumpy comments up above suggested, the int function takes a second argument, which is the base of the conversion. So it's taking the base 2 (binary) variable bound to p and turning it to a base-10 int, i.e., normal human.
