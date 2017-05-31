@@ -1,7 +1,9 @@
 """
 Question 11 - Level 2
 Question:
-Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input 
+and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed 
+in a comma separated sequence.
 
 Example:
 0100,0011,1010,1001
@@ -24,7 +26,9 @@ for binaryNumber in spiltTheDigitBinaryNumbers:
 print(",".join(valueDividedByFife))
 
 """
- the grumpy comments up above suggested, the int function takes a second argument, which is the base of the conversion. So it's taking the base 2 (binary) variable bound to p and turning it to a base-10 int, i.e., normal human.
+ the grumpy comments up above suggested, the int function takes a second argument, 
+ which is the base of the conversion. So it's taking the base 2 (binary) variable bound to p and turning it 
+ to a base-10 int, i.e., normal human.
 
 """
 
