@@ -9,16 +9,16 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 """
-def swappedLetterToDigitInFormula(formulas):
+def swappedLetterToDigitInFormula(formula):
   swappedValues = []
-  for item in formulas:
-    swappedValues = formulas.replace(item, a)
+  for item in formula:
+    swappedValues = formula.replace(item, a)
   return swappedValues
 
 
 
 a = input ("write one value")
-sumcia = 0
+suma = 0
 
 formula = "a+aa+aaa+aaaa"
 swappedValues = swappedLetterToDigitInFormula(formula)
@@ -26,8 +26,8 @@ swappedValues = swappedLetterToDigitInFormula(formula)
 splitedFormula = (str(swappedValues)).split("+")
 
 for item in splitedFormula:
-  sumcia += int(item)
+  suma += int(item)
 
 
 print("changed formula = ", swappedValues)
-print("suma = ", sumcia)
+print("suma = ", suma)
