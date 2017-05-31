@@ -32,3 +32,18 @@ allWords = set(words) #Test if every element in the set is in other.
 
 print(" ".join(sorted(allWords))) #sortowanie
 
+"""
+Maćka sugestie do zmian:
+task 10
+- co robią pliki task_08.py i task_09.py na tym branchu?
+L20 to jest niepotrzebne, w treści nie ma nic o tym, że to ma być w pętli
+L29 widzę, że 'oryginalne' rozwiązanie jest takie samo, ale w treści jest
+    że mają być rozdzielone przez whitespace character. Whitespace to też
+    na przykład tabulacja.
+    https://pl.wikipedia.org/wiki/Znaki_niedrukowalne
+    Czy jest w pythonie:
+    a) wariant split, który przyjmuje set/array znaków, które są "dzielącymi"?
+    b) jakieś utility (coś na stringu?), które zwraca whitecharactersSet?
+
+
+"""
