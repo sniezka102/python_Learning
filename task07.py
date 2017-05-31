@@ -26,6 +26,6 @@ for row in range(rowNum):
 print (multilist)
 
 """
-current solution is much better, because in my case I was used the matrix generator but I could add what I want
+current solution is much better, because in my case I used the matrix generator but I could add what I want
 to the matrix instead of using the multilist[row][col] = row*col
 """
