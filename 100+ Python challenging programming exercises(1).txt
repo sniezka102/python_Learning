@@ -223,24 +223,29 @@ print ','.join(value)
 my solution:
 
 import math
-#definition of function which take the values from the console and confert it to the list
-def modifyInputDateToFloat():
-  Dvalue = []
-  value = input ("write few numbers, please separate them by the comma")
-  value = value.split(",")
-  for item in value:
-    Dvalue.append(int(item))
-  return (Dvalue)
 
-D = modifyInputDateToFloat()
+#definition of function which take the values from the console and confert it to the list
+
+def convertStringToFloatArray(data):
+  dValue = []
+  for item in data:
+    dValue.append(int(item))
+  return (dValue)
+
+value = input ("write few numbers, please separate them by the comma")
+value = value.split(",")
+
+D = convertStringToFloatArray(value)
 C = 50
 H = 30
 
+
 #Q calculations
+
 Q =[]
-for items in D:
-  q = math.sqrt((2* C * items) / H)  #calculations
-  Q.append(int(q)) #here I could use the round instead of the int conversion
+for item in D:
+  q = math.sqrt((2* C * item) / H)  #calculations
+  Q.append(int(q))
   
 print (Q)
 #----------------------------------------------------------------------------------------------------------------------------------#
@@ -275,21 +280,15 @@ print multilist
 #----------------------------------------#
 my solution:
 
-value = input("please add value separated the comma")
-data = []
-data = value.split(",")
-
-testArray = []
-
-#create the number of columns and rows
-X = int(data[0]) #columns
-print ("X / columns = ", X)
-Y = int(data[1]) #rows
-print ("Y / rows = ", Y)
-
-#in current solution was used the two dimentional generator to create the array
-testArray = [[i * j for j in range(Y)] for i in range(X)]
-print (testArray)
+input_str = input("add two values ")
+dimensions=[int(x) for x in input_str.split(',')]
+rowNum=dimensions[0]
+colNum=dimensions[1]
+multilist = [[0 for col in range(colNum)] for row in range(rowNum)] #here also was used the matrix generator
+for row in range(rowNum):
+   for col in range(colNum):
+        multilist[row][col]= row*col  #calculate what should be added to the matrix
+print (multilist)
 
 
 #----------------------------------------------------------------------------------------------------------------------------------#
@@ -313,12 +312,12 @@ print ','.join(items)
 #----------------------------------------#
 my solution:
 
-stringInput = input("please, write few words")
+stringInput = input("please, write few words in a comma-separated sequence")
 stringInput = stringInput.split(",")
 
 sortedString = []
 sortedString = sorted(stringInput, key = str.lower)
-print(','.join(sortedString)) #now is displayed by the comma, not as the list of strings
+print(sortedString)
 
 #----------------------------------------------------------------------------------------------------------------------------------#
 
@@ -357,11 +356,11 @@ print("add the text line, write 'break' if you want to finish action\n")
 while (True):
   inputString = input()
   if inputString == 'break':
-    break;
+    break
   else:
     lines.append(inputString.upper())
-for sentance in lines:
-  print("".join(sentance))
+for sentence in lines:
+  print("".join(sentence))
 
 
 #----------------------------------------------------------------------------------------------------------------------------------#
@@ -433,15 +432,15 @@ print ','.join(value)
 #----------------------------------------#
 my solution
 digitBinaryNumbers = input("add 4 digit binary numbers, which are separated by the comma\n")
-digitBinaryNumbers = digitBinaryNumbers.split(",")
-digitVal = []
+spiltTheDigitBinaryNumbers = digitBinaryNumbers.split(",")
+valueDividedByFife = []
 
-for binaryNumber in digitBinaryNumbers:
+for binaryNumber in spiltTheDigitBinaryNumbers:
   convertedDigitNumber = int(binaryNumber, 2) #conversion from binary to digit 
   if (convertedDigitNumber % 5 == 0):
-    digitVal.append(binaryNumber)
-    print("".join(binaryNumber))
+    valueDividedByFife.append(binaryNumber)
 
+print(",".join(valueDividedByFife))
 
 #----------------------------------------------------------------------------------------------------------------------------------#
 Question 12 -- Level 2
@@ -462,16 +461,14 @@ print ",".join(values)
 #----------------------------------------#
 my solution:
 
-wholeEvenNumbersInNumber = []
-numb = input("add value in range <1000,3001>")
-if (int(numb) >= 1000) and (int(numb) <= 3000):
-  if ((int(numb[0])%2)==0) and ((int(numb[1])%2)==0) and ((int(numb[2])%2)==0) and ((int(numb[3])%2)==0):
-    wholeEvenNumbersInNumber.append(numb)
+numbersWithOnlyEvenDigits = []
+for item in range (1000,3001):
+  number = str(item)
+  if ((int(number[0])%2)==0) and ((int(number[1])%2)==0) and ((int(number[2])%2)==0) and ((int(number[3])%2)==0):
+    numbersWithOnlyEvenDigits.append(number)
   else:
-    print("non all of the numbers in number are even")
-else:
-  print("number = ", num, " is out of range")
-print (",".join(wholeEvenNumbersInNumber))
+    pass
+print (",".join(numbersWithOnlyEvenDigits))
 
 
 #----------------------------------------------------------------------------------------------------------------------------------#
@@ -503,17 +500,17 @@ print "DIGITS", d["DIGITS"]
 my solution
 
 inputSentence = input("write some text")
-countsOfLetters = 0 
-countsOfDigits = 0 
-for items in inputSentence:
-  if items.isalpha():  #function which give possibility to check if current item is a letter 
-    countsOfLetters += 1
-  elif items.isdigit():  #function which give possibility to check if current item is digit 
-    countsOfDigits +=1
+lettersCount = 0 
+digitCount = 0 
+for character in inputSentence:
+  if character.isalpha():  #function which give possibility to check if current item is a letter 
+    lettersCount += 1
+  elif character.isdigit():  #function which give possibility to check if current item is digit 
+    digitCount +=1
   else:
     pass  #I need to add the else statement but I didn't have any sentence to use here, that's why I used  the pass statement
 
-print(" LETTERS ", countsOfLetters, "\n", "DIGITS ", countsOfDigits)
+print(" LETTERS ", lettersCount, "\n", "DIGITS ", digitCount)
 
 
 #----------------------------------------------------------------------------------------------------------------------------------#
@@ -545,23 +542,24 @@ print "LOWER CASE", d["LOWER CASE"]
 my solution:
 
 inputSentence = input("write some text")
-countsUpperLetters = 0 
-countsLowerLetters = 0 
-for items in inputSentence:
-  if items.isupper():  #function which give possibility to check if current letter is an upper letter
-    countsUpperLetters += 1
-  elif items.islower():  #function which give possibility to check if current letter is a lower letter 
-    countsLowerLetters +=1
+upperLettersCount = 0 
+lowerLettersCount = 0 
+for character in inputSentence:
+  if character.isupper():  #function which give possibility to check if current letter is an upper letter
+    upperLettersCount += 1
+  elif character.islower():  #function which give possibility to check if current letter is a lower letter 
+    lowerLettersCount +=1
   else:
     pass  #I need to add the else statement but I didn't have any sentence to use here, that's why I used  the pass statement
 
-print(" UPPER CASE ", countsUpperLetters, "\n", "LOWER CASE ", countsLowerLetters)
+print(" UPPER CASE ", upperLettersCount, "\n", "LOWER CASE ", lowerLettersCount)
 
 
 #----------------------------------------------------------------------------------------------------------------------------------#
 Question 15 -- Level 2
 Question:
-Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a. Suppose the following input is supplied to the program:
+Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a. 
+Suppose the following input is supplied to the program:
 	9
 Then, the output should be:
 	11106
@@ -578,29 +576,26 @@ print n1+n2+n3+n4
 
 #----------------------------------------#
 my solution
-def swappedLetterToDigitInFormula(formulas):
+def swappedLetterToDigitInFormula(formula):
   swappedValues = []
-  for item in formulas:
-    swappedValues = formulas.replace(item, a)
+  for item in formula:
+    swappedValues = formula.replace(item, a)
   return swappedValues
 
-
-
 a = input ("write one value")
-sumcia = 0
+suma = 0
 
 formula = "a+aa+aaa+aaaa"
 swappedValues = swappedLetterToDigitInFormula(formula)
 
-#the split() is not available for the list so below I've swapped the the int to string
 splitedFormula = (str(swappedValues)).split("+")
 
 for item in splitedFormula:
-  sumcia += int(item)
+  suma += int(item)
 
 
 print("changed formula = ", swappedValues)
-print("suma = ", sumcia)
+print("suma = ", suma)
 
 
 #----------------------------------------------------------------------------------------------------------------------------------#
