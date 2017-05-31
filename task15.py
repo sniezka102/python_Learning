@@ -15,10 +15,7 @@ swappedValues = []
 
 formula = "a+aa+aaa+aaaa"
 for item in formula:
-  if item == 'a':
-    swappedValues = formula.replace(item, a)
-  else:
-    pass
+  swappedValues = formula.replace(item, a)
 
 formula = (str(swappedValues)).split("+")
 
@@ -26,5 +23,5 @@ for item in formula:
   sumcia += int(item)
 
 
-print(swappedValues)
-print(sumcia)
+print("changed formula = ", swappedValues)
+print("suma = ", sumcia)
