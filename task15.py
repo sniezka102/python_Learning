@@ -9,17 +9,23 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 """
+def swappedLetterToDigitInFormula(formulas):
+  swappedValues = []
+  for item in formulas:
+    swappedValues = formulas.replace(item, a)
+  return swappedValues
+
+
+
 a = input ("write one value")
 sumcia = 0
-swappedValues = []
 
 formula = "a+aa+aaa+aaaa"
-for item in formula:
-  swappedValues = formula.replace(item, a)
+swappedValues = swappedLetterToDigitInFormula(formula)
 
-formula = (str(swappedValues)).split("+")
+splitedFormula = (str(swappedValues)).split("+")
 
-for item in formula:
+for item in splitedFormula:
   sumcia += int(item)
 
 
