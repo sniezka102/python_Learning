@@ -21,8 +21,8 @@ print("add the text line, write 'break' if you want to finish action\n")
 while (True):
   inputString = input()
   if inputString == 'break':
-    break;
+    break
   else:
     lines.append(inputString.upper())
-for sentance in lines:
-  print("".join(sentance))
+for sentence in lines:
+  print("".join(sentence))
