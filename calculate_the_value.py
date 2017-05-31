@@ -14,18 +14,24 @@ The output of the program should be:
 18,22,24
 
 """
+
 import math
+
 #definition of function which take the values from the console and confert it to the list
-def convertInputDataToFloat():
-  Dvalue = []
+def inputData():
   value = input ("write few numbers, please separate them by the comma")
   value = value.split(",")
+  return value
+
+def convertStringToFloatArray():
+  dValue = []
+  value = inputData()
   for item in value:
-    Dvalue.append(int(item))
-  return (Dvalue)
+    dValue.append(int(item))
+  return (dValue)
 
 
-D = convertInputDataToFloat()
+D = convertStringToFloatArray()
 C = 50
 H = 30
 
@@ -33,8 +39,8 @@ H = 30
 #Q calculations
 
 Q =[]
-for items in D:
-  q = math.sqrt((2* C * items) / H)  #calculations
+for item in D:
+  q = math.sqrt((2* C * item) / H)  #calculations
   Q.append(int(q))
   
 print (Q)
