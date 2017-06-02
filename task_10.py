@@ -1,7 +1,8 @@
 """
 Question 10 - Level 2
 Question:
-Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all 
+duplicate words and sorting them alphanumerically.
 Suppose the following input is supplied to the program:
 
 hello world and practice makes perfect and hello world again
@@ -42,13 +43,31 @@ L29 widzę, że 'oryginalne' rozwiązanie jest takie samo, ale w treści jest
     na przykład tabulacja.
     https://pl.wikipedia.org/wiki/Znaki_niedrukowalne
     Czy jest w pythonie:
-    a) wariant split, który przyjmuje set/array znaków, które są "dzielącymi"? - w zadaniu jest zastosowane metoda podziału 
-                                                                                całego tekstu poprzez usunięcie znaków ich dzielących
-                                                                                w przypadku białych znaków jest to split(" ")
+    a) wariant split, który przyjmuje set/array znaków, które są "dzielącymi"? - w zadaniu jest zastosowane metoda 
+																			podziału całego tekstu poprzez usunięcie 
+																			znaków ich dzielących
+                                                                           w przypadku białych znaków jest to split(" ")
+																		   
+		- it is possible to add an array of charts, and split it by the e.g. '...', '.,.', 'text' itp.
+		- 
                                                                               
-    b) jakieś utility (coś na stringu?), które zwraca whitecharactersSet? - nie wiem czy dokładnie o to chodzi, ale jest metoda sprawdzająca 
-                                                                            czy dany string jest white, jest to .isspace()
+    b) jakieś utility (coś na stringu?), które zwraca whitecharactersSet? - nie wiem czy dokładnie o to chodzi, ale jest
+																			metoda sprawdzająca czy dany string jest 
+																			white, jest to .isspace()
                                                                             
+text = " 1  2   3    4     5      6       7all=28"
+whiteCharSum = 0
+letterSum = 0 
 
+for item in text:
+  if item.isspace():
+    whiteCharSum += 1
+#    print("item = ", item, " whiteCharSum = ", whiteCharSum)
+  else:
+    letterSum += 1
+    
+
+print ("whiteCharSum = ", whiteCharSum)
+print("\n letterSum = ", letterSum)
 
 """
