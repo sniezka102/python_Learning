@@ -14,11 +14,11 @@ In case of input data being supplied to the question, it should be assumed to be
 inputListValues = input("add few values separated by the comma")
 inputListValues2 = inputListValues.split(",")
 
-listOddValues = []
-
+listOddValues = [item for item in inputListValues2 if (int(item)%2) != 0]
+"""
 for item in inputListValues2:
   if (int(item)%2) != 0:
     listOddValues.append(item)
-
+"""
 print (",".join(listOddValues))
     
